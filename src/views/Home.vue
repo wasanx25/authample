@@ -6,7 +6,6 @@
 </template>
 
 <script>
-// @ is an alias to /src
 import PlayerTable from '@/components/PlayerTable.vue'
 
 export default {
