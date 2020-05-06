@@ -1,7 +1,6 @@
 <template>
     <div>
       <input type='text' v-model='filterWord' v-on:input="filterName">
-      <p>{{ filterWord }}</p>
       <p>{{ filterPlayers }}</p>
       <table>
         <thead>
