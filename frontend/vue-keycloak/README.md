@@ -1,4 +1,4 @@
-# vue-test-project
+# vue-keycloak
 
 ## Project setup
 ```
