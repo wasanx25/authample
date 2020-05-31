@@ -1,0 +1,9 @@
+{
+  "properties": [
+    {
+      "name": "keycloak.security-constraints.security-collections.patterns",
+      "type": "java.lang.String",
+      "description": "Description for keycloak.security-constraints.security-collections.patterns."
+    }
+  ]
+}
