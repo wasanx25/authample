@@ -1,4 +1,4 @@
-name: test
+name: frontend unit test CI
 
 on:
   push:
@@ -9,10 +9,8 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
-
     - name: setup Node.js environment
       uses: actions/setup-node@v1.4.2
       with:
@@ -21,3 +19,4 @@ jobs:
       run: |
         yarn install
         yarn test:unit
+      working-directory: frontend/vue-keycloak
