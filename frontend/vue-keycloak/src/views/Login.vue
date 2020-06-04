@@ -1,5 +1,6 @@
 <template>
   <div class="login">
+    <p>{{ preferredName }}</p>
     <button v-on:click="login">Login</button>
   </div>
 </template>
@@ -9,11 +10,16 @@ import axios from 'axios'
 
 export default {
   name: 'Login',
+  data: function () {
+    return {
+      preferredName: ''
+    }
+  },
   methods: {
     login: function () {
-      axios.get('http://localhost:8080/login')
+      axios.get('/sample')
         .then(response => {
-          window.location.href = response.data
+          this.preferredName = response.data
         })
         .catch(reason => {
           console.log(reason)

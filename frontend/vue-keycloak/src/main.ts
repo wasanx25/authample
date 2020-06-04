@@ -4,6 +4,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import Keycloak from 'keycloak-js'
+import axios from 'axios'
 
 Vue.config.productionTip = false
 
@@ -29,6 +30,8 @@ keycloak.init({ onLoad: 'login-required' }).then((authenticated) => {
     beforeCreate: function () {
       this.$store.commit('accessToken', keycloak.token || '')
       this.$store.commit('refreshToken', keycloak.refreshToken || '')
+
+      axios.defaults.headers.common.Authorization = `bearer ${this.$store.state.accessToken}`
     },
     render: h => h(App)
   }).$mount('#app')

@@ -4,3 +4,4 @@ keycloak:
   public-client: true
   realm: SampleAuth
   resource: login-app
+  bearer-only: true
