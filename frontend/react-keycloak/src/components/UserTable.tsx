@@ -6,8 +6,10 @@ function UserTable () {
   const [users, setUsers] = useState([])
 
   useEffect(() => {
+    const params = new URLSearchParams()
+    params.append('limit', '10')
     axios
-      .get('https://jsonplaceholder.typicode.com/users?limit=10')
+      .get('https://jsonplaceholder.typicode.com/users', { params })
       .then(res => {
         setUsers(res.data)
       })
