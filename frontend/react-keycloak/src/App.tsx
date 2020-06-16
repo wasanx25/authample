@@ -1,9 +1,10 @@
-import React from 'react';
-import './App.css';
+import React from 'react'
+import './App.css'
 import UserTable from './components/UserTable'
+import { CardList } from './components/CardList'
 import { Switch, Route, Link, BrowserRouter as Router } from 'react-router-dom'
 
-function App() {
+function App () {
   return (
     <Router>
       <ul>
@@ -11,10 +12,13 @@ function App() {
           <Link to='/'>Home</Link>
         </li>
         <li>
-          <Link to='/about' >About</Link>
+          <Link to='/about'>About</Link>
         </li>
         <li>
-          <Link to='/users' >Users</Link>
+          <Link to='/users'>Users</Link>
+        </li>
+        <li>
+          <Link to='/cards'>Cards</Link>
         </li>
       </ul>
 
@@ -36,9 +40,14 @@ function App() {
             <UserTable/>
           </div>
         </Route>
+        <Route path='/cards'>
+          <div>
+            <CardList/>
+          </div>
+        </Route>
       </Switch>
     </Router>
-  );
+  )
 }
 
-export default App;
+export default App
