@@ -1,7 +1,6 @@
 keycloak:
   auth-server-url: http://localhost:8081/auth
   principal-attribute: preferred_username
-  public-client: true
   realm: SampleAuth
   resource: login-app
   bearer-only: true
