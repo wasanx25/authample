@@ -1,4 +1,4 @@
-package com.github.wasanx25
+package com.github.authsample
 
 import org.keycloak.adapters.springboot.KeycloakSpringBootConfigResolver
 import org.keycloak.adapters.springsecurity.KeycloakSecurityComponents

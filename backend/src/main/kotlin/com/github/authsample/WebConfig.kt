@@ -1,4 +1,4 @@
-package com.github.wasanx25
+package com.github.authsample
 
 import org.springframework.context.annotation.Configuration
 import org.springframework.web.servlet.config.annotation.CorsRegistry

@@ -1,4 +1,4 @@
-package com.github.wasanx25
+package com.github.authsample
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

@@ -1,4 +1,4 @@
-package com.github.wasanx25
+package com.github.authsample
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
