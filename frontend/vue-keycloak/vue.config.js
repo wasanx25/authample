@@ -1,7 +1,7 @@
 module.exports = {
   devServer: {
     proxy: {
-      '/sample': {
+      '/authsample': {
         target: 'http://localhost:8080'
       }
     }

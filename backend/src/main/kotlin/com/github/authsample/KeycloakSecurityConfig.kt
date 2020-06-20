@@ -38,7 +38,7 @@ class KeycloakSecurityConfig : KeycloakWebSecurityConfigurerAdapter() {
     override fun configure(http: HttpSecurity?) {
         super.configure(http)
         http!!.authorizeRequests()
-                .mvcMatchers("/sample").hasRole("user")
+                .mvcMatchers("/**").hasRole("user")
                 .anyRequest().permitAll()
     }
 }

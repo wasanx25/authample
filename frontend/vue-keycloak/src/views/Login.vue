@@ -17,7 +17,7 @@ export default {
   },
   methods: {
     login: function () {
-      axios.get('/sample')
+      axios.get('/authsample/users')
         .then(response => {
           this.preferredName = response.data
         })

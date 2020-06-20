@@ -4,3 +4,6 @@ keycloak:
   realm: SampleAuth
   resource: login-app
   bearer-only: true
+server:
+  servlet:
+    context-path: /authsample
