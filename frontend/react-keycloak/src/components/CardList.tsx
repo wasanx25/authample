@@ -16,7 +16,7 @@ export const CardList = () => {
       <button onClick={() => dispatch(addCard('a', 'b'))}>
         Add
       </button>
-      <div>
+      <div data-testid={'card-list'}>
         {cards.length === 0 ? 'Not Found' : cards.map((card, index) => {
           return (
             <div key={index}>
