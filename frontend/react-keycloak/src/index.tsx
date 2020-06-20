@@ -6,6 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux'
 import store from './redux/store'
 import Keycloak from 'keycloak-js'
+import axios from 'axios'
 
 const options = {
   url: 'http://localhost:8081/auth',
@@ -22,6 +23,8 @@ keycloak.init({ onLoad: 'login-required' }).then((authenticated) => {
     console.log('Not Authenticated')
     window.location.reload()
   }
+
+  axios.defaults.headers.common.Authorization = `bearer ${keycloak.token}`
 
   ReactDOM.render(
     <Provider store={store}>
