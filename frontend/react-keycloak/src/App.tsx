@@ -1,5 +1,4 @@
 import React from 'react'
-import './App.css'
 import UserTable from './components/UserTable'
 import { CardList } from './components/CardList'
 import { Switch, Route, Link, BrowserRouter as Router } from 'react-router-dom'

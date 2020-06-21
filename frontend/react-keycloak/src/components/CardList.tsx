@@ -19,7 +19,7 @@ export const CardList = () => {
       <div data-testid={'card-list'}>
         {cards.length === 0 ? 'Not Found' : cards.map((card, index) => {
           return (
-            <div key={index}>
+            <div className={'card'} key={index}>
               <h2>{card.id} - {card.title}</h2>
               <p>{card.desc}</p>
               <p>{card.status}</p>
@@ -27,6 +27,11 @@ export const CardList = () => {
           )
         })}
       </div>
+      <style jsx>{`
+          .card {
+            background-color: #61dafb; 
+          }  
+      `}</style>
     </div>
   )
 }

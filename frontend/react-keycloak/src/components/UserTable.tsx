@@ -44,6 +44,27 @@ function UserTable () {
         }
         </tbody>
       </table>
+
+      <style jsx>{`
+        .table {
+            border: solid #aaa 3px;
+            margin: 30px auto;
+        }
+        
+        .table thead {
+            border-bottom: solid #aaa 2px;
+        }
+        
+        .table tr {
+            border-bottom: solid #afafaf 2px;
+            padding: 2px;
+        }
+        
+        .table tr td {
+            border-bottom: solid #afafaf 2px;
+            padding: 2px;
+        }
+      `}</style>
     </div>
   )
 }
