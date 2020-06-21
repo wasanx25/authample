@@ -1,10 +1,10 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import { CardList } from './CardList'
+import { CardList } from '../../components/CardList'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
-import { Card } from '../constants'
-import cards from '../redux/reducers/cards'
+import { Card } from '../../constants'
+import cards from '../../redux/reducers/cards'
 
 test('render CardList component', async () => {
   const cardList = {

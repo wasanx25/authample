@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { act } from '@testing-library/react'
-import UserTable from './UserTable'
+import UserTable from '../../components/UserTable'
 import moxios from 'moxios'
 
 test('request test', async () => {
