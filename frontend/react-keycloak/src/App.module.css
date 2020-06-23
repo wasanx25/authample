@@ -1,0 +1,13 @@
+.headerLine {
+    background-color: #aaa;
+    margin: 0 0 1.5em;
+}
+
+.navigation {
+    margin: 1em 0;
+}
+
+.navigation li {
+    display: inline-block;
+    margin: 0 1em 0 0;
+}

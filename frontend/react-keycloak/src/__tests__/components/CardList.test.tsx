@@ -21,11 +21,7 @@ test('render CardList component', async () => {
   )
 
   const expectedHTML = `
-    <div class="card">
-        <h2>0 - test title</h2>
-        <p>test desc</p>
-        <p>test status</p>
-    </div>
+    <li>0 - title: test title desc: test desc status: test status</li>
   `.replace(/\s*</gi, '\<').trimEnd()
 
   expect(result.getByTestId('card-list').innerHTML).toContain(expectedHTML)

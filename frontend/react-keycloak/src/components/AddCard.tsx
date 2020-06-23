@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux'
 import { addCard } from '../redux/actions'
 import React, { useState } from 'react'
+import 'bulma/css/bulma.css'
 
 export const AddCard = () => {
   const dispatch = useDispatch()
@@ -15,13 +16,25 @@ export const AddCard = () => {
 
   return (
     <div>
-      <label htmlFor='card-title'>Title</label>
-      <input type='text' value={title} onChange={(e) => setTitle(e.target.value)} />
+      <div className='field'>
+        <label className='label'>Title</label>
+        <div className='control'>
+          <input className='input' type='text' value={title} onChange={(e) => setTitle(e.target.value)} />
+        </div>
+      </div>
 
-      <label htmlFor='card-desc'>Desc</label>
-      <input type='text' value={desc} onChange={(e) => setDesc(e.target.value)} />
+      <div className='field'>
+        <label className='label'>Desc</label>
+        <div className='control'>
+          <input className='input' type='text' value={desc} onChange={(e) => setDesc(e.target.value)} />
+        </div>
+      </div>
 
-      <input type='button' value='submit' onClick={handleSubmit}/>
+      <div className='field'>
+        <div className='control'>
+          <input className='button is-primary' type='button' value='submit' onClick={handleSubmit}/>
+        </div>
+      </div>
     </div>
   )
 }
