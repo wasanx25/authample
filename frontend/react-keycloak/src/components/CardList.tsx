@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { addCard } from '../redux/actions'
 import React from 'react'
 import { Card } from '../constants'
+import styles from './CardList.module.css'
 
 interface RootState {
   cards: Card[]
@@ -19,7 +20,7 @@ export const CardList = () => {
       <div data-testid={'card-list'}>
         {cards.length === 0 ? 'Not Found' : cards.map((card, index) => {
           return (
-            <div className={'card'} key={index}>
+            <div className={styles.card} key={index}>
               <h2>{card.id} - {card.title}</h2>
               <p>{card.desc}</p>
               <p>{card.status}</p>
@@ -27,11 +28,6 @@ export const CardList = () => {
           )
         })}
       </div>
-      <style jsx>{`
-          .card {
-            background-color: #61dafb; 
-          }  
-      `}</style>
     </div>
   )
 }
