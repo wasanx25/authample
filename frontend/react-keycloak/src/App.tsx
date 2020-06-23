@@ -1,7 +1,7 @@
 import React from 'react'
 import UserTable from './components/UserTable'
-import { CardList } from './components/CardList'
 import { Switch, Route, Link, BrowserRouter as Router } from 'react-router-dom'
+import { CardPage } from './pages/CardPage'
 
 function App () {
   return (
@@ -41,7 +41,7 @@ function App () {
         </Route>
         <Route path='/cards'>
           <div>
-            <CardList/>
+            <CardPage/>
           </div>
         </Route>
       </Switch>

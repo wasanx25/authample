@@ -1,5 +1,4 @@
-import { useDispatch, useSelector } from 'react-redux'
-import { addCard } from '../redux/actions'
+import {  useSelector } from 'react-redux'
 import React from 'react'
 import { Card } from '../constants'
 import styles from './CardList.module.css'
@@ -10,13 +9,9 @@ interface RootState {
 
 export const CardList = () => {
   const cards = useSelector((state: RootState) => state.cards)
-  const dispatch = useDispatch()
 
   return (
     <div>
-      <button onClick={() => dispatch(addCard('a', 'b'))}>
-        Add
-      </button>
       <div data-testid={'card-list'}>
         {cards.length === 0 ? 'Not Found' : cards.map((card, index) => {
           return (
