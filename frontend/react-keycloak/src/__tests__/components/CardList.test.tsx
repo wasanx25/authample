@@ -20,7 +20,14 @@ test('render CardList component', async () => {
     </Provider>
   )
 
-  expect(result.getByTestId('card-list'))
-    .toContainHTML('<div><h2>0 - test title</h2><p>test desc</p><p>test status</p></div>')
+  const expectedHTML = `
+    <div class="card">
+        <h2>0 - test title</h2>
+        <p>test desc</p>
+        <p>test status</p>
+    </div>
+  `.replace(/\s*</gi, '\<').trimEnd()
+
+  expect(result.getByTestId('card-list').innerHTML).toContain(expectedHTML)
 })
 
