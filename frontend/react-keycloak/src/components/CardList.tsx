@@ -1,6 +1,8 @@
-import {  useSelector } from 'react-redux'
-import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import React, { useEffect } from 'react'
 import { Card } from '../constants'
+import axios from 'axios'
+import { receiveCards } from '../redux/actions'
 
 interface RootState {
   cards: Card[]
@@ -8,6 +10,13 @@ interface RootState {
 
 export const CardList = () => {
   const cards = useSelector((state: RootState) => state.cards)
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    axios.get('/authsample/cards').then(response => {
+      dispatch(receiveCards(response))
+    })
+  })
 
   return (
     <div>
