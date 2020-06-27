@@ -6,4 +6,4 @@ keycloak:
   bearer-only: true
 server:
   servlet:
-    context-path: /authsample
+    context-path: /authample
