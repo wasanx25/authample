@@ -1,6 +1,7 @@
-import { ADD_CARD, MOVE_CARD } from "./actionTypes";
+import { ADD_CARD, RECEIVE_CARDS, MOVE_CARD } from './actionTypes'
+import { AxiosResponse } from 'axios'
 
-let nextCardId = 0;
+let nextCardId = 0
 
 export const addCard = (title: string, desc: string) => ({
   type: ADD_CARD,
@@ -17,4 +18,9 @@ export const moveCard = (id: number, status: string) => ({
     id,
     status
   }
+})
+
+export const receiveCards = (response: AxiosResponse) => ({
+  type: RECEIVE_CARDS,
+  cards: response.data
 })
