@@ -11,11 +11,15 @@ Use port list
 - React: 3000
 - Vue: 8090
 
-### Keycloak
+### Setup
 
-```console
-$ docker run -itd -p 127.0.0.1:8081:8080 -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=[PASSWORD] --name authample_keycloak quay.io/keycloak/keycloak:10.0.1
+Use docker, running db and keyclaok container
+
 ```
+$ POSTGRES_PASSWORD=[POSTGRES_PASSWORD] KEYCLOAK_PASSWORD=[KEYCLOAK_PASSWORD] docker-compose up -d
+```
+
+### Keycloak
 
 Create realm and user and client, refs https://www.keycloak.org/getting-started/getting-started-docker
 
