@@ -19,6 +19,13 @@ Use docker, running db and keyclaok container
 $ POSTGRES_PASSWORD=[POSTGRES_PASSWORD] KEYCLOAK_PASSWORD=[KEYCLOAK_PASSWORD] docker-compose up -d
 ```
 
+schema and seed data
+
+```
+$ psql -h 127.0.0.1 -p 9696 -d db_authample -U testtest -W -f create_cards_table.sql
+$ psql -h 127.0.0.1 -p 9696 -d db_authample -U testtest -W -f insert_cards_table.sql
+```
+
 ### Keycloak
 
 Create realm and user and client, refs https://www.keycloak.org/getting-started/getting-started-docker
