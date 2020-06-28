@@ -27,12 +27,12 @@ interface MoveCardAction {
   }
 }
 
-interface GetCardsAction {
+interface ReceiveCardsAction {
   type: typeof RECEIVE_CARDS,
   cards: Card[]
 }
 
-type CardAction = AddCardAction | MoveCardAction | GetCardsAction
+type CardAction = AddCardAction | MoveCardAction | ReceiveCardsAction
 
 export default function (state = initialState, action: CardAction) {
   switch (action.type) {
