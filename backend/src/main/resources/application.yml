@@ -4,6 +4,13 @@ keycloak:
   realm: SampleAuth
   resource: login-app
   bearer-only: true
+
 server:
   servlet:
     context-path: /authample
+
+spring:
+  datasource:
+    url: "jdbc:postgresql://127.0.0.1:9696/db_authample"
+    username: testtest
+    password: testtest
