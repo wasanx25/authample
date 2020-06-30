@@ -13,7 +13,7 @@ export const CardList = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    axios.get('/authsample/cards').then(response => {
+    axios.get('/authample/cards').then(response => {
       dispatch(receiveCards(response))
     })
   })
