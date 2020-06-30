@@ -16,7 +16,7 @@ export const CardList = () => {
     axios.get('/authample/cards').then(response => {
       dispatch(receiveCards(response))
     })
-  })
+  }, [])
 
   return (
     <div>

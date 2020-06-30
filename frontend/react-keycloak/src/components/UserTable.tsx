@@ -16,7 +16,7 @@ function UserTable () {
       .catch(err => {
         console.error(err)
       })
-  })
+  }, [])
 
   return (
     <div>
