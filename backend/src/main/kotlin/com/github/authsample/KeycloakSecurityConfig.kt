@@ -40,5 +40,9 @@ class KeycloakSecurityConfig : KeycloakWebSecurityConfigurerAdapter() {
         http!!.authorizeRequests()
                 .mvcMatchers("/**").hasRole("user")
                 .anyRequest().permitAll()
+                .and()
+                .csrf().disable()
+                // TOOD: 一時CSRFをOFFにしているが、localでsame-site origin polisyをクリアできる見込みがたったらenableにする
+                // .csrf().csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
     }
 }
