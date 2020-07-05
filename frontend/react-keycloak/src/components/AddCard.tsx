@@ -2,6 +2,7 @@ import { useDispatch } from 'react-redux'
 import { addCard } from '../redux/actions'
 import React, { useState } from 'react'
 import 'bulma/css/bulma.css'
+import axios from 'axios'
 
 export const AddCard = () => {
   const dispatch = useDispatch()
@@ -9,6 +10,13 @@ export const AddCard = () => {
   const [desc, setDesc] = useState('')
 
   const handleSubmit = () => {
+    axios.post('/authample/cards', {
+      title: title,
+      desc: desc,
+      status: 'todo'
+    }).then(response => {
+      console.log(response)
+    })
     dispatch(addCard(title, desc))
     setTitle('')
     setDesc('')
