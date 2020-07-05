@@ -28,14 +28,13 @@ $ psql -h 127.0.0.1 -p 9696 -d db_authample -U testtest -W -f insert_cards_table
 
 ### Keycloak
 
-Create realm and user and client, refs https://www.keycloak.org/getting-started/getting-started-docker
+Create realm, import [realm-export.json](https://github.com/wasanx25/authample/blob/master/realm-export.json)
 
-- Realm Name: `SampleAuth`
-- Client ID: `login-app`
-- Valid Redirect URIs
-  - `localhost:8080/*`
-  - `localhost:3000/*`
-  - `localhost:8090/*`
+<img src="https://user-images.githubusercontent.com/7300913/86508639-a08a4780-be1c-11ea-9996-8d18c0ec0de4.png">
+
+Create user, refs https://www.keycloak.org/getting-started/getting-started-docker#_create_a_user
+
+
 
 ### Spring Boot
 
